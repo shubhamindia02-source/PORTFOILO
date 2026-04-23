@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
+
+
+	<title>Registration Form</title>
+<style>
+
+*
+{
+	margin: 0px;
+	
+	
+}
+	.container {
+		
+      width:800px;
+      margin: 50px auto;
+      padding: 20px;
+	  color: rgb(31, 0, 3);
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      align-content: center;
+	  box-shadow: 0PX 7PX 50PX rgb(111, 3, 3);
+  }
+
+
+  body{
+	background-color: rgb(60, 3, 7);
+  }
+    
+  input {
+    	
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+
+  }
+  select{
+	width: 89%;
+	padding: 8px;
+	margin-top :5px ;
+	border: 1px soild #000000 ;
+	border-radius: 7px;
+  }
+	label{ font-family: poppins, sans-serif;
+		  
+	 }
+	 button {
+      width: 100px;
+      padding: 10px;
+      margin-top: 15px;
+	  margin-left: 200%;
+      background: #000000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+	  
+    }
+
+    button:hover {
+      background: #1a945c;
+    }
+
+	#message {
+		width: 244% ;
+		padding: 8px;
+	margin-top :5px ;
+	border: 1px soild #000000 ;
+	border-radius: 7px;
+  } 
+  h1{
+	font-family: poppins, sans-serif;
+	font-weight: 800;
+  }
+
+	
+	
+</style>
+
+</head>
+<body>
+	
+	<main>
+		<form >
+		<table class="container" cellpadding="10" cellspacing="0">
+			<tr>
+				<th colspan="4">
+					<h1 >Registretion Form</h1>
+	            </th>
+			<tr>
+				<td><label for="firstname"> First Name</label></td>
+				<td><input tittle="Type here" placeholder="Enter your First Name" id="forfirstname" type="text"  required ></td>
+
+				<td><label for="lastname"> Last Name</label></td>
+				<td><input tittle="Type here" placeholder="Enter your Last Name" id="forlastname" type="text" required ></td>
+
+			</tr>
+			<tr>
+				<td><label for="Email Id"> Email Id </label></td>
+				<td><input tittle="Type here" type="email" placeholder="Enter Email Id" id="foremail" required ></td>
+
+				<td> <label for="forage"> Age</label></td>
+				<td>
+					<select>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						
+					</select>
+				</td>
+				
+			</tr>
+			<tr>
+				<td><label for="Phone Number"> Phone Number</label></td>
+				<td><input tittle="Type phone number here" placeholder="Enter your valid Phone Number" id="forphone number" type="Number" pattern="(\+91)?[0-9]{10}"  required >
+				</td>
+
+
+				<td> <label>DOB</label></td>
+				<td><input TYPE="DATE"></td>
+			</tr>
+
+			<tr>
+
+
+
+				<td><label for="State"> State</label></td>
+				<tD>
+					<select name="state">
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="TamiL Nadu">Tamil Nadu</option>
+						<option value="Assam">Assam</option>
+						<option value="Haryana">Haryana</option>
+						
+					</select>
+				</tD>			
+			</tr>
+
+             <TR> 
+				<td >
+					<label> Message</label></td>
+			<TD><textarea name=" feedback" id="message" placeholder=" please give your message here" rows="5" colloms ></textarea>
+           </td></TR>
+			<tr>
+				<td>
+					<button type="submit">Register</button>
+				</td>
+				
+			</tr>
+			
+
+			
+		
+				
+
+</table>
+</form>
+</main>
+</body>
+</html>
