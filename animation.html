@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+
+    
+  />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    body{
+        background: #000;
+        color: antiquewhite;
+
+    }
+    
+    header{
+        text-align: center;
+        margin: 30px auto;
+        font-family: Helvetica, sans-serif;
+        font-size: 56px;
+        font-weight: 400;
+
+    }
+   
+
+    .sec{
+             
+       margin: auto;
+       font-family: Helvetica, sans-serif;
+        font-size: 30px;
+        
+        width: 400px;
+        cursor: pointer;
+        height: 50px;
+      
+    }
+    .sec:hover{
+        cursor: pointer;
+        animation: zoomIn;
+        animation-duration: 0.50s;
+    }
+
+
+
+
+
+
+
+    p{
+        text-align: center;
+        margin:   15px auto ;
+       font-family: Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 100;
+        
+        width: 80%;
+        
+        
+
+    }
+.animate__animated.animate__backInUp {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 700ms;
+  --animate-delay: 0.9s;
+}
+
+.animate__animated.animate__fadeInLeftBig {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 700ms;
+  --animate-delay: 0.9s;
+}
+
+  
+</style>
+<body>
+    <header>
+       <H2  class="animate__animated animate__backInUp"> BackInUp Animation</H2>
+
+    </header>
+    <main>
+        <section>
+            <h3 class="sec"> Hover zoomIn Animation</h3>
+
+            <p  class="animate__animated animate__fadeInLeftBig">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quam nam, consectetur similique quasi magnam explicabo eius suscipit perspiciatis aperiam est, porro inventore harum. Culpa quisquam accusantium vero mollitia fuga?
+            Obcaecati facere voluptatem quod nulla magni itaque velit rem sapiente vel. Corrupti veniam ratione fuga maiores explicabo cum eos esse aperiam, recusandae suscipit quo at provident voluptatum laborum nobis quos.
+        
+        
+        
+        
+        
+        </p>
+        </section>
+
+    </main>
+
+    
+</body>
+</html>
