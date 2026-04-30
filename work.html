@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>work</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
 </head>
-<style>
-    * {
+<style>* {
         margin: 0;
         padding: 0;
     }
@@ -25,7 +23,7 @@
     }
 
     nav {
-        height: 70px;
+        height: 7vh;
         background: #131313;
 
 
@@ -71,82 +69,16 @@
         color: #e64500;
     }
 
-    h2 {
-        text-align: center;
-        margin-top: 100px;
-        margin-bottom: 40px;
-        font-size: 50px;
-    }
-
-
-    .section1 {
-        padding: 60px;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-
-    } 
-    a{
-        text-decoration: none;
-        color: #131313;
-        
-    }
-
-    .tab {
-        padding-top: 20px;
-        font-size: 25px;
-        font-weight: 500;
-        text-align: center;
-        border-radius: 10px;
-        background-color:rgba(245, 245, 245, 0.742);
-        width: 20%;
-        height: 40px;
-        cursor: pointer;
-        transition: 0.4s ease;
-        box-shadow: 0px 5px 10px  #91868245;
-        
-
-    }
-
-    .tab:hover {
-        transform: scale(1.2);
-        background-color: #e64500;
-        font-weight: 800;
-        
-       }
 
 
 
 
-    .section2 {
-          padding: 60px;
-        
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-    }
-
-    .section3 {
-          padding: 60px;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .break {
-        width: 80%;
-        margin: auto;
-        opacity: 0.5;
-
-    }
-
-       .navfooter {
-
+    .navfooter {
+          
         background: #252525;
         padding: 20px;
         text-align: center;
-        margin-top: 60px;
+        margin-top: 300px;
 
 
     }
@@ -182,20 +114,60 @@
         opacity: 0.5;
 
     }
-.tab a {
+
+
+    .mainsection {
+       
+        display: flex;
+        justify-content: space-around;
+        margin: 110px;
+        flex-wrap: wrap;
+        
+         
+
+    }
+    .tab{
+        width: 400px;
+        height: 140px;
+        border-radius: 10px;
+        background-color:rgba(245, 245, 245, 0.862);
+        box-shadow: 0px 5px 10px  #91868245;
+        text-align: center;
+        font-size: 40px;
+        padding-top :100px;
+cursor: pointer;
+      transition: 0.4s ease-in-out;
+        
+    }
+.tab a{
+    text-decoration: none;
     color: black;
+    transition: 0.4s ease;
+    
 }
+
 .tab a:hover{
+    
     color: whitesmoke;
+    font-weight: 700;
+    
 }
-   
-   
-   
+
+
+.tab:hover {
+        transform: scale(1.2);
+        background-color: #e64500;
+        font-weight: 800;
+        
+       }
+
+    
+
 
 </style>
-
 <body>
-    <header>
+
+      <header>
         <nav class="nav">
             <div class="leftnav">Shubham Portfolio</div>
             <div class="rightnav">
@@ -208,30 +180,33 @@
             </div>
         </nav>
         <hr>
-          
 
     </header>
-    <main>
-        <h2>Practice Work</h2>
-        <section class="section1">
-            <div class="tab"><a class="bass" href="Tabellayout.html" >Table</a></div>
-            <div class="tab"><a href="Registratioinform.html">Resigration Form</a></div>
-            <div class="tab"><a href="FORM.HTML">LoginForm</a></div>
-                       
-        </section>
-        <section class="section2"><div class="tab"><a href="photogallery.html">Photo Gallery</a></div>
-            <div class="tab"><a href="#">Bookmark</a></div>
-             <div class="tab"><a href="#">Form</a></div>
+<main>
+
+     <section class="mainsection">
+            <div class="tab">
+                
+                    <a href="Project1.html">Project Work</a>
+                
+            </div>
+            <div class="tab">
+                <a href="practicework.html">Pradtices Work</a>
+
             
+        </div>
+
+
         </section>
-        <section class="section3">
-            <div class="tab"><a href="#">List</a></div>
-            <div class="tab"><a href="#">Audio/Video</a></div>
-            <div class="tab"><a href="#">Responsive</a></div>
-        </section>
-    </main>
-    <hr class="break">
-     <footer>
+
+</main>
+   
+   
+    
+
+
+
+      <footer>
         <div class="navfooter">
             <div class="mywork">UI/UX Designer | Web Designer | Graphic Designer | Video Editor</div>
             <div class="socialmedialink">
@@ -244,7 +219,6 @@
 
 
     </footer>
-
+    
 </body>
-
 </html>
