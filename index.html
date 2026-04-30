@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work</title>
+    <title>new portfolio</title>
 </head>
-<style>* {
+<style>
+    * {
         margin: 0;
         padding: 0;
     }
@@ -69,16 +71,97 @@
         color: #e64500;
     }
 
+    .mainsection {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: 110px;
+        flex-wrap: wrap;
+         
+
+    }
+
+    .profilepic img {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 8px solid #e64500;
+
+    }
+
+    .profilepic img:hover {
+
+        border: 8px solid #ff9e75;
+        transition: ease-in-out;
+
+    }
+
+    .rightsection {
+
+
+        max-width: 30vw;
+        margin-top: 70px;
+
+
+    }
+
+
+    span {
+        background: #e64500;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+    }
+
+    span:hover {
+        background: none;
+        color: #e64500;
+        font-weight: bolder;
+
+        transition: ease-in-out;
+    }
+
+    .hello {
+        font-size: 30px;
+        font-weight: normal;
+    }
+
+    .name {
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    .work {
+        font-size: 30.5px;
+        font-weight: 500;
+        color: #e64500;
+    }
+
+    .work:hover {
+        color: #ff9e75;
+
+    }
+
+    p {
+        font-size: 20px;
+    }
 
 
 
+    .break {
+        width: 80%;
+        margin: auto;
+        opacity: 0.5;
+
+    }
 
     .navfooter {
           
         background: #252525;
         padding: 20px;
         text-align: center;
-        margin-top: 300px;
+        margin-top: 60px;
+        
 
 
     }
@@ -114,60 +197,10 @@
         opacity: 0.5;
 
     }
-
-
-    .mainsection {
-       
-        display: flex;
-        justify-content: space-around;
-        margin: 110px;
-        flex-wrap: wrap;
-        
-         
-
-    }
-    .tab{
-        width: 400px;
-        height: 140px;
-        border-radius: 10px;
-        background-color:rgba(245, 245, 245, 0.862);
-        box-shadow: 0px 5px 10px  #91868245;
-        text-align: center;
-        font-size: 40px;
-        padding-top :100px;
-cursor: pointer;
-      transition: 0.4s ease-in-out;
-        
-    }
-.tab a{
-    text-decoration: none;
-    color: black;
-    transition: 0.4s ease;
-    
-}
-
-.tab a:hover{
-    
-    color: whitesmoke;
-    font-weight: 700;
-    
-}
-
-
-.tab:hover {
-        transform: scale(1.2);
-        background-color: #e64500;
-        font-weight: 800;
-        
-       }
-
-    
-
-
 </style>
-<body>
 
-      <header>
+<body>
+    <header>
         <nav class="nav">
             <div class="leftnav">Shubham Portfolio</div>
             <div class="rightnav">
@@ -182,31 +215,25 @@ cursor: pointer;
         <hr>
 
     </header>
-<main>
-
-     <section class="mainsection">
-            <div class="tab">
-                
-                    <a href="Project1.html">Project Work</a>
+    <main>
+        <section class="mainsection">
+            <div class="leftsection">
+                <DIV class="profilepic"><img src="image/PROFILE.JPG" alt="Profile photo"></DIV>
+            </div>
+            <div class="rightsection">
+                <h3 class="hello"><span>Hello,</span>I am</h3>
+                <h2 class="name">Shubham Arya</h2>
+                <H2 class="work">UI/UX & WEB DESIGNER</H2>
                 
             </div>
-            <div class="tab">
-                <a href="practicework.html">Pradtices Work</a>
-
-            
-        </div>
 
 
         </section>
 
-</main>
-   
-   
-    
 
-
-
-      <footer>
+    </main>
+    <hr class="break">
+    <footer>
         <div class="navfooter">
             <div class="mywork">UI/UX Designer | Web Designer | Graphic Designer | Video Editor</div>
             <div class="socialmedialink">
@@ -219,6 +246,8 @@ cursor: pointer;
 
 
     </footer>
-    
+
+
 </body>
+
 </html>
