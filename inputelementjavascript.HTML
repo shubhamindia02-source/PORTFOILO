@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+     * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #131313;
+        color:whitesmoke ;
+        font-family: Helvetica, sans-serif;
+        align-items: center;
+    }
+
+    .navbar {
+        background: #292929;
+        width: 800px;
+        height: 80px;
+        margin: 30px auto;
+        box-shadow: 0px 3px 10px rgb(131, 129, 129);
+        text-align: center;
+        border-radius: 20px;
+
+    }
+    
+
+    .box{
+        box-sizing: border-box;
+        background: rgb(247, 247, 247);
+         width: 500px;
+         height: 300px;
+         margin-left: 35%;
+         margin-top: 120px;
+         border-width: 2px; 
+         border-radius: 30px;
+         color: rgb(0, 0, 0);
+         padding: 50px;
+         font-size: 20px;
+         font-weight: 500;
+        
+    }
+
+    div input{
+        
+    	
+    width: 70%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-left: 40px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    font-weight: 500;
+
+  }
+
+  
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border-width: 0px;
+    margin-left: 35px;
+    font-size: 30px;
+    border: 1px solid #000000;
+    
+
+
+}
+    
+
+
+
+   
+</style>
+<body>
+
+    
+    <div class="box">
+        <div >NO1 
+             <input type="number" id="t1" value="0"></div>
+
+
+        <div style="margin-top: 10px;">NO2  
+            <input type="number" id="t2" value="0"></div>
+
+
+        <div style="margin-top: 10px;">Result 
+            
+            <input type="number" id="r" value="0"  style="margin-left: 25px;"></div>
+        <br>
+
+
+
+
+
+
+
+        <div >
+        <button onclick="f1()">+</button>
+        <button onclick="f2()">-</button>
+        <button onclick="f3()">x</button>
+        <button onclick="f4()">/</button>
+    </div>
+    </div>
+
+
+    <script>
+        var n1 = document.getElementById("t1")
+        var n2 = document.getElementById("t2")
+        var n3 = document.getElementById("r")
+        function f1()
+        {
+            var sum = parseInt(n1.value)+parseInt(n2.value)
+            n3.value=sum
+        }
+        function f2()
+        {
+            var sum = parseInt(n1.value)-parseInt(n2.value)
+            n3.value=sum
+        }
+        function f3()
+        {
+            var sum = parseInt(n1.value)*parseInt(n2.value)
+            n3.value=sum
+        }
+        function f4()
+        {
+            var sum = parseInt(n1.value)/parseInt(n2.value)
+            n3.value=sum
+        }
+
+
+
+        
+    </script>
+    
+</body>
+</html>
