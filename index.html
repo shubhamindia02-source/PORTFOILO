@@ -197,12 +197,188 @@
         opacity: 0.5;
 
     }
+
+
+
+
+
+      /* ── HAMBURGER MENU ── */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 100;
+    }
+    .hamburger span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        background: whitesmoke;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        box-sizing: unset;
+    }
+   
+
+    /* ── TABLET (768px – 1024px) ── */
+    @media (max-width: 1024px) and (min-width: 768px) {
+        .mainsection {
+            margin: 60px 40px;
+            gap: 40px;
+        }
+        .profilepic img {
+            width: 300px;
+            height: 300px;
+        }
+        .rightsection {
+            max-width: 45vw;
+            margin-top: 30px;
+        }
+        .name {
+            font-size: 38px;
+        }
+        .work {
+            font-size: 22px;
+        }
+        .hello {
+            font-size: 24px;
+        }
+        nav ul li {
+            font-size: 16px;
+            margin-right: 18px;
+        }
+        .leftnav {
+            font-size: 20px;
+        }
+        .mywork {
+            font-size: 18px;
+        }
+        .socialmedialink a {
+            font-size: 18px;
+        }
+        .copyright {
+            font-size: 16px;
+        }
+    }
+
+    /* ── MOBILE (≤ 767px) ── */
+    @media (max-width: 767px) {
+        .hamburger {
+            display: flex;
+        }
+        nav {
+            height: auto;
+            flex-wrap: wrap;
+            padding: 10px 16px;
+            justify-content: space-between;
+            position: relative;
+        }
+        .leftnav {
+            width: auto;
+            font-size: 18px;
+            text-align: left;
+        }
+        .rightnav {
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .rightnav.open {
+            max-height: 300px;
+            padding-bottom: 10px;
+        }
+        .rightnav ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            padding-top: 14px;
+        }
+        nav ul li {
+            font-size: 16px;
+            margin-right: 0;
+        }
+        .mainsection {
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 20px;
+            gap: 30px;
+        }
+        .profilepic img {
+            width: 220px;
+            height: 220px;
+        }
+        .rightsection {
+            max-width: 100%;
+            margin-top: 0;
+            text-align: center;
+        }
+        .hello {
+            font-size: 22px;
+        }
+        .name {
+            font-size: 32px;
+        }
+        .work {
+            font-size: 18px;
+        }
+        .navfooter {
+            margin-top: 30px;
+            padding: 16px;
+        }
+        .mywork {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .socialmedialink a {
+            font-size: 14px;
+            margin: 8px;
+        }
+        .copyright {
+            font-size: 13px;
+        }
+    }
+
+
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background: #e64500;
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background: #e64500;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 
 <body>
     <header>
         <nav class="nav">
             <div class="leftnav">Shubham Portfolio</div>
+             <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span></div>
             <div class="rightnav">
                 <ul>
                     <li> <a href="index.html">Home</a></li>
