@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #131313;
+        color: whitesmoke;
+        font-family: Helvetica, sans-serif;
+        align-items: center;
+    }
+
+    .navbar {
+        background: #292929;
+        width: 50%;
+        height: 80px;
+        margin: 30px auto;
+        box-shadow: 0px 3px 10px rgb(131, 129, 129);
+        text-align: center;
+        border-radius: 20px;
+
+    }
+      h2 {
+        padding-top: 15px;
+        font-size: 2rem;
+    }
+
+
+
+
+    .pic {
+
+        width: 40%;
+        position: absolute; 
+        left: 30%;
+        transition: 1.7S ;
+        overflow: hidden;
+       
+      
+         border: 2px solid rgba(187, 184, 184, 0.329);
+         border-radius: 20px;
+
+
+
+
+    }
+</style>
+
+<body>
+    <header>
+
+           <nav class="navbar">
+            <h2> Running Banner</h2>
+        </nav>
+       
+    </header>
+
+    <section>
+         <img src="../image/n1.jpg"  class="pic">
+        <img src="../image/n2.jpg"  class="pic">
+        <img src="../image/n3.jpg"  class="pic">
+        <img src="../image/n4.jpg"  class="pic">
+        <img src="../image/n5.jpg"  class="pic">
+
+    </section>
+
+    <script>
+        // finging image in DOM  
+
+        var plist = document.getElementsByTagName("img")
+        var n1 = plist[4]
+        var n2 = plist[3]
+        var n3 = plist[2]
+        var n4 = plist[1]
+        var n5 = plist[0]
+
+        var c = -1
+
+        function runbanner() {
+            switch (c) {
+                case 0:
+                    // n1.style.transform = "skew(20deg, 10deg)"
+                    n1.style.opacity = 0
+                    break;
+
+                case 1:
+                    // n2.style.transform = " "
+                    n2.style.opacity = 0
+                    break;
+
+                case 2:
+                    // n3.style.transform = ""
+                    n3.style.opacity = 0
+                    break;
+
+                case 3:
+                    // n4.style.transform = " "
+                    n4.style.opacity = 0
+                    break;
+
+                case 4:
+                    // n5.style.transform = " "
+                    n5.style.opacity = 0
+                    break;
+
+
+
+
+
+                case 5: 
+                    // n2.style.transform = "scale(1) "
+                    // n3.style.transform = "scale(1)"
+                    // n4.style.transform = "scale(1)"
+                    // n5.style.transform = "scale(1)"
+
+
+
+                    n1.style.opacity = 1
+                    n2.style.opacity = 1
+                    n3.style.opacity = 1
+                    n4.style.opacity = 1
+                     n5.style.opacity = 1
+
+                  break;
+
+
+
+            }
+
+            if(c<=plist.length)
+            {
+                c++
+            }
+            else{
+                c =0
+            }
+
+            document.title = c
+             setTimeout("runbanner()",2500)
+
+        }
+        runbanner()
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

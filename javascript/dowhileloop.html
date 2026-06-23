@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+     * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #131313;
+        color:whitesmoke ;
+        font-family: Helvetica, sans-serif;
+        align-items: center;
+    }
+
+   
+
+
+</style>
+<body>
+
+
+    <!-- <h1><a href="../image/portfoilio.pdf">Download Here</a></h1> -->
+    <script>
+
+        // do while loop
+        // its is post testd loop
+
+        var pw = "abc@123"
+        var response;
+        var turn = 0
+
+        var turn = 0
+        do 
+        {
+
+
+
+            response = prompt ("Enter Password Here to Download....")
+            if (response===pw) {
+                alert("Valil Password")
+                document.write("<h1><a href='../image/portfoilio.pdf'>Download Here </a></h1>")
+                break;
+
+            }
+        
+            if (turn>=3) {
+                alert("Access Deined.. # Try Again Later")
+            }
+            turn++
+
+              }
+
+            while (turn <= 3)
+                document.title = "Ready"
+      
+        
+    </script>
+
+
+
+
+</body>
+
+</html>

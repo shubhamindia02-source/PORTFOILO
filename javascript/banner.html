@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #131313;
+        color: whitesmoke;
+        font-family: Helvetica, sans-serif;
+        align-items: center;
+    }
+
+    .navbar {
+        background: #292929;
+        width: 800px;
+        height: 80px;
+        margin: 30px auto;
+        box-shadow: 0px 3px 10px rgb(131, 129, 129);
+        text-align: center;
+        border-radius: 20px;
+
+    }
+
+    h2 {
+        padding-top: 15px;
+        font-size: 50px;
+    }
+   
+    .banner{
+        
+      width:40%;
+   
+      margin: auto;
+      overflow: hidden;
+      border: 5px solid rgb(187, 184, 184);
+      border-radius: 20px;
+      
+      
+    }
+    
+
+ 
+    .banner img {
+        width: 100%;
+        height: 100%;
+        
+
+
+
+         
+    }
+
+    .banner img.active {
+        display: block;
+    }
+       
+    .radio{
+        text-align: center;
+        margin-top: 20px;
+        
+    }
+    .radio input{
+          cursor: pointer;
+         
+       
+    }
+
+</style>
+
+<body onload="show()">
+    <header>
+        <nav class="navbar">
+            <h2>Banner</h2>
+        </nav>
+    </header>
+
+
+        <div class="banner">
+            <img src="n1.jpg" id="p" class="active">
+        </div>
+
+
+        <div class="radio">
+            <input type="radio" name="slide" id="r1">
+            <input type="radio" name="slide" id="r2">
+            <input type="radio" name="slide" id="r3">
+            <input type="radio" name="slide" id="r4">
+            <input type="radio" name="slide" id="r5">
+
+        </div>
+    
+    <script>
+        var p = document.getElementbyId("p");
+        var s = document.getElementsByName("slide");
+        var c = 0;
+
+
+        s[c].checked = true;
+
+        var t;
+
+
+
+
+        function show() {
+            if (c <= s.length - 1) {
+                c++
+            }
+            else {
+                c = 1;
+            }
+            p.src = "n" + c + ".jpg";
+            s[c - 1].checked = true;
+
+
+            document.title = c
+            t = setTimeout("show()", 1000);
+
+            s[0].onclick = function () {
+                clearTimeout(t);
+                setTimeout("p.src='n1.jpg'", 1000);
+                c = 1
+                setTimeout("show()", 6000);
+            }
+
+
+            s[1].onclick = function () {
+                clearTimeout(t);
+                setTimeout("p.src='n2.jpg'", 1000);
+                c = 2
+                setTimeout("show()", 6000);
+            }
+
+            s[2].onclick = function () {
+                clearTimeout(t);
+                setTimeout("p.src='n3.jpg'", 1000);
+                c = 3
+                setTimeout("show()", 6000);
+            }
+
+            s[3].onclick = function () {
+                clearTimeout(t);
+                setTimeout("p.src='n4.jpg'", 1000);
+                c = 4
+                setTimeout("show()", 6000);
+            }
+
+            s[4].onclick = function () {
+                clearTimeout(t);
+                setTimeout("p.src='n5.jpg'", 1000);
+                c = 5
+                setTimeout("show()", 6000);
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
