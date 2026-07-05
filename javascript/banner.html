@@ -74,6 +74,7 @@
        
     }
 
+
 </style>
 
 <body onload="show()">
@@ -83,9 +84,9 @@
         </nav>
     </header>
 
-
+      
         <div class="banner">
-            <img src="n1.jpg" id="p" class="active">
+            <img src="../image/n1.jpg" id="p" class="active">
         </div>
 
 
@@ -97,9 +98,11 @@
             <input type="radio" name="slide" id="r5">
 
         </div>
+
+        
     
     <script>
-        var p = document.getElementbyId("p");
+        var p = document.getElementById("p");
         var s = document.getElementsByName("slide");
         var c = 0;
 
@@ -120,45 +123,45 @@
             }
             p.src = "n" + c + ".jpg";
             s[c - 1].checked = true;
-
+         h
 
             document.title = c
-            t = setTimeout("show()", 1000);
+            t = setTimeout("show()", 3000);
 
             s[0].onclick = function () {
                 clearTimeout(t);
-                setTimeout("p.src='n1.jpg'", 1000);
+                setTimeout("p.src='../image/n1.jpg'", 3000);
                 c = 1
-                setTimeout("show()", 6000);
+                setTimeout("show()", 10000);
             }
 
 
             s[1].onclick = function () {
                 clearTimeout(t);
-                setTimeout("p.src='n2.jpg'", 1000);
+                setTimeout("p.src='../image/n2.jpg'", 3000);
                 c = 2
-                setTimeout("show()", 6000);
+                setTimeout("show()", 10000);
             }
 
             s[2].onclick = function () {
                 clearTimeout(t);
-                setTimeout("p.src='n3.jpg'", 1000);
+                setTimeout("p.src='../image/n3.jpg'", 3000);
                 c = 3
-                setTimeout("show()", 6000);
+                setTimeout("show()", 10000);
             }
 
             s[3].onclick = function () {
                 clearTimeout(t);
-                setTimeout("p.src='n4.jpg'", 1000);
+                setTimeout("p.src='../image/n4.jpg'", 3000);
                 c = 4
-                setTimeout("show()", 6000);
+                setTimeout("show()", 10000);
             }
 
             s[4].onclick = function () {
                 clearTimeout(t);
-                setTimeout("p.src='n5.jpg'", 1000);
+                setTimeout("p.src='../image/n5.jpg'", 3000);
                 c = 5
-                setTimeout("show()", 6000);
+                setTimeout("show()", 10000);
             }
 
         }

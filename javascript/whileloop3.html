@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #131313;
+        color: whitesmoke;
+        font-family: Helvetica, sans-serif;
+        align-items: center;
+    }
+
+    .navbar {
+        background: #292929;
+        width: 800px;
+        height: 80px;
+        margin: 30px auto;
+        box-shadow: 0px 3px 10px rgb(131, 129, 129);
+        text-align: center;
+        border-radius: 20px;
+
+    }
+
+    h2 {
+        padding-top: 15px;
+        font-size: 50px;
+    }
+
+
+
+   h1{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 60px;
+   }
+
+
+ .banner{
+        
+      width:50%;
+      margin: auto;
+      box-sizing: border-box;
+    }
+    
+   .banner img {
+        width: 100%;
+         border-radius: 20px;
+         
+    }
+
+
+</style>
+<body>
+ <header>
+        <nav class="navbar">
+            <h2>While loop</h2>
+        </nav>
+    </header>
+
+
+    <h1 id="m">Image of the </h1>
+    <div class="banner">
+        <img id="pic" src="" alt="">
+    </div>
+
+
+
+    <script>
+        //using switch statement\
+        //syntax
+
+
+        var d = new Date();
+        var m = document.getElementById("m")
+          var pic = document.getElementById("pic")
+          pic.src="../image/n1.jpg"
+          var today =d.getDay()
+
+          switch(today){
+
+
+            case 1:
+                m.innerHTML+="Monday"
+                pic.src="../image/n1.jpg"
+                break;
+
+
+
+                 case 2:
+                m.innerHTML+="Tuesday"
+                pic.src="../image/n2.jpg"
+                break;
+
+
+                 case 3:
+                m.innerHTML+="Wednesday"
+                pic.src="../image/n3.jpg"
+                break;
+
+
+
+                 case 4:
+                m.innerHTML+="Thursday"
+                pic.src="../image/n4.jpg"
+                break;
+
+                 case 5:
+                m.innerHTML+="Friday"
+                pic.src="../image/n5.jpg"
+                break;
+
+                 case 6:
+                m.innerHTML+="Saturday"
+                pic.src="../image/n6.jpg"
+                break;
+
+                 case 0:
+                m.innerHTML+="Sunday"
+                
+                pic.src="../image/n7.jpg"
+                break;
+                default:
+                    pic.src="../image/n1.jpg"
+                 break;
+          }
+          document.title="WORKING"
+
+</script>
+</body>
+</html>

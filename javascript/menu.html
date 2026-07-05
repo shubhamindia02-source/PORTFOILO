@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+ body {
+        background: #131313;
+        color: whitesmoke;
+        font-family: Helvetica, sans-serif;
+        align-items: center;
+    }
+
+    .navbar {
+        background: #292929;
+        width: 800px;
+        height: 80px;
+        margin: 30px auto;
+        box-shadow: 0px 3px 10px rgb(131, 129, 129);
+        text-align: center;
+        border-radius: 20px;
+
+    }
+
+    h2 {
+        padding-top: 15px;
+        font-size: 50px;
+    }
+    #nav{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+
+    }
+    #nav div{
+            width: 230px;}
+      
+
+
+    #menu1,#menu2,#menu3{
+      
+        font-size: 40px;
+        background-color: transparent;
+        border-width: 0px;
+        color: whitesmoke;
+    }
+   
+
+    #m,#m2, #m3{
+      
+        margin-top: 2px ;
+        font-size: 30px;
+        color: brown;
+        padding: 0px;
+
+    }
+    li{
+        list-style-type: none;
+        padding: 10px;
+        cursor: pointer;
+        
+    }
+        li:hover{
+        background-color: green;
+        color: antiquewhite;
+       
+    }
+
+    .toggle{
+        display: none;
+
+    }
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+       <header>
+        <nav class="navbar">
+            <h2>Menu</h2>
+        </nav>
+    </header>
+
+
+    <div id="nav">
+        <div><button onclick="show_hide_menu(event)" id="menu1">Main</button>
+            <ol id="m" class="tooggle">
+                <li>Home</li>
+                <li>Project</li>
+                <li>About</li>
+            </ol></div>
+
+
+
+            <div><button onclick="show_hide_menu(event)" id="menu2">Project</button>
+                <ol id="m2" class="tooggle">
+                    <li>Htmk</li>
+                    <li>JavaScript</li>
+                    <li>Css</li>
+                </ol></div>
+
+
+                <div><button onclick="show_hide_menu(event)" id="menu3">Social Media</button>
+                    <ol id="m3" class="tooggle">
+                        <li>Youtube</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                    </ol></div>
+
+                </div>
+            </div>
+
+
+
+            <!-- JavaScript -->
+
+
+            <script>
+                var menu_visible = false;
+                var m1 = document.getElementById("m");
+
+
+                function show_hide_menu(event) {
+
+                    var mid = event.target.id
+
+                    m1.classList.add("toggle");
+                    m2.classList.add("toggle");
+                    m3.classList.add("toggle");
+
+                    switch(mid)
+                    {
+                        case "menu1":
+                            m.classList.remove("toggle");
+                            document.title = "menu1"
+                            break;
+
+                            case "menu2":
+                            m2.classList.remove("toggle");
+                            document.title = "menu2"
+                            break;
+
+                            case "menu3":
+                            m3.classList.remove("toggle");
+                            document.title = "menu3"
+                            break;
+                    }
+                }
+
+                window.onlick = function(event)
+                {
+                    if((event.target == "[object HTMLHtmlElement]")||(event.target == "[object HTMLUnknownElement]"))
+                {
+                       m1.classList.add("toggle");
+                    m2.classList.add("toggle");
+                    m3.classList.add("toggle");
+
+
+
+                }
+                }
+
+
+
+
+            </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

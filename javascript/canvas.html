@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+</style>
+
+<body>
+    <input type="color" style="position: absolute;" id="mycolor">
+    <canvas id="mycan" style=" background: rgb(233, 241,241);   width: 80%;
+        height: 600px; "></canvas>
+    <script>
+        var c = document.getElementById("mycan");
+        var mycolor = document.getElementById("mycolor")
+        var k;
+        var r = 10
+        var d = c.getContext("2d");
+        c.width = window.innerWidth;
+        c.heigth = window.innerHeight;
+        var red, green, blue, drawcolor
+        var drawmode = false
+        drawcolor = "red"
+
+        mycolor.onchange = function () {
+            drawcolor = this.value
+        }
+
+
+
+        function f1(event) {
+
+            k = event.key
+            switch (k) {
+                case "+":
+                    if (r < 100) {
+                        r = r + 1
+                        document.title = r
+                    }
+                    break;
+
+                case "-":
+                    if (r > 10) {
+                        r = r - 1
+                        document.title = r
+                    }
+                    break;
+                case " ":
+                    d.clearRect(0, 0, window.innerWidth, window.innerHeight)
+                    break;
+            }
+        }
+
+        function draw(event) {
+            if (drawmode) {
+                var x = event.pageX
+                var y = event.pageY
+                red = Math.round(Math.random() * 255)
+                green = Math.round(Math.random() * 255)
+                blue = Math.round(Math.random() * 255)
+                drawcolor = "rgb(" + red + "," + green + "," + blue + ")"
+
+                d.beginPath();
+                //d.arc(x, y, r, 0, 2 * Math.PI)
+                //d.rect(x,y,r ,r);
+                d.moveTo(x,y)
+                d.lineTO(Math.random()*1200,Math.random()*1200);
+
+                d.fillstyle = drawcolor
+                d.fill()
+                d.lineWidth=Math.random()*110
+                d.strokeStyle=drawcolor
+                d.stroke();
+            }
+        }
+
+        function f2() {
+            drawmode = (!drawmode) ? true : false
+
+
+            document.title=drawmode
+        }
+
+        document.addEventListener("keydown", f1)
+        document.addEventListener("click", f2)
+        document.addEventListener("mousemove", draw)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
