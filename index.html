@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Website</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bree+Serif&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+   <link rel="stylesheet" href="https://fontawesome.com/icons/classic/solid/angles-up?pc=rgba%28255%2C%20255%2C%20255%2C%201.00%29&sc=rgba%28255%2C%20255%2C%20255%2C%200.4%29">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+
+    }
+
+    :root {
+        --first-color: #000e25;
+        --sec-color: rgb(7, 156, 255);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .link li {
+        list-style: none;
+    }
+
+    .menu-list {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 18px;
+    }
+
+    .menu-list:hover {
+        color: var(--sec-color);
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .navbar {
+
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--sec-color);
+
+    }
+
+    .navbar-menu .link {
+        display: flex;
+        gap: 40px;
+    }
+
+    .menu-list {
+        font-size: 18px;
+        font-weight: 300;
+        padding: 4px 10px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        width: 200px;
+        border: 2px solid transparent;
+
+        transition: all 0.4s ease;
+    }
+
+    .menu-list:hover {
+        color: var(--sec-color);
+        background: rgba(170, 208, 233, 0.748);
+        border: 0px solid rgba(188, 212, 228, 0.4);
+
+    }
+
+    .navbar .toggle_btn img {
+        cursor: pointer;
+        width: 1.5rem;
+        display: none;
+    }
+
+    .dropdown_menu {
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+
+        height: 210px;
+        width: 120px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+    .dropdown_menu.open {
+        display: none;
+
+    }
+
+    .dropdown_menu {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .dropdown_menu .link a {
+        display: block;
+
+        width: 100px;
+    }
+
+    @media (max-width: 992px) {
+        .navbar .toggle_btn img {
+            display: block !important;
+        }
+
+        .navbar-menu .link {
+            display: none;
+        }
+
+        .dropdown_menu {
+            display: block;
+
+        }
+
+    }
+
+    @media (min-width:992px) {
+
+
+        .dropdown_menu {
+            display: none;
+        }
+
+    }
+
+
+
+    .fa-solid{
+        font-size: 30px;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">Shubham Arya</div>
+            <div class="navbar-menu">
+                <ul class="link">
+                    <li><a href="#home" class="menu-list">Home</a></li>
+                    <li><a href="#about" class="menu-list">About</a></li>
+                    <li><a href="#resume" class="menu-list">Resume</a></li>
+                    <li><a href="#portfolio" class="menu-list">Work</a></li>
+                    <li><a href="#contact" class="menu-list">Contact</a></li>
+                </ul>
+            </div>
+            <div class="toggle_btn">
+                <img src="image/hamburger.png" alt="" class="ham-icon">
+            </div>
+            <div class="dropdown_menu open">
+                <ul class="link">
+                    <li><a href="#home" class="menu-list">Home</a></li>
+                    <li><a href="#about" class="menu-list">About</a></li>
+                    <li><a href="#resume" class="menu-list">Resume</a></li>
+                    <li><a href="#portfolio" class="menu-list">Work</a></li>
+                    <li><a href="#contact" class="menu-list">Contact</a></li>
+                </ul>
+            </div>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <!-- section one home  -->
+            <div class="sec-box">
+                <div class="info">
+                    <h3>Shubham</h3>
+                    <h2>Arya</h2>
+                    <h4>Web Developer</h4>
+                </div>
+                <div class="link-button">
+                    <a href="#resume">Resume</a>
+                    <a href="#portfolio">Project</a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- second section about -->
+        <section id="about">
+            <div class="sec-two">
+                <div class="aboutinfo">
+                    <h3>About</h3>
+                    <hr>
+                    <!-- <h5>Web Developer</h5> -->
+                    <p>
+
+                        I'm a passionate <b>**Web Developer** </b>and <b>**Creative UI Designer**</b> dedicated to
+                        crafting modern,
+                        responsive, and user-centric web experiences. I enjoy transforming ideas into clean,
+                        interactive,
+                        and visually appealing websites that combine creativity with functionality.
+                    </p>
+                    <p>
+
+                        My core expertise includes **HTML, CSS, JavaScript, Figma, and Graphic Design**, allowing me to
+                        bridge the gap between design and development. From designing intuitive user interfaces to
+                        writing
+                        clean, maintainable code, I focus on building digital experiences that are both engaging and
+                        performance-driven.
+                    </p>
+                    <p>
+                        As a fresher, I believe continuous learning is the key to growth. I actively explore modern web
+                        technologies, best development practices, and emerging design trends to sharpen my skills and
+                        stay
+                        ahead in the ever-evolving tech landscape. Every project I build is an opportunity to improve,
+                        experiment, and deliver better solutions.
+                    </p>
+                    <p>
+                        I value clean code, responsive design, accessibility, and attention to detail. My goal is to
+                        create
+                        websites that not only look great but also provide seamless user experiences across all devices.
+
+                        I'm excited to collaborate with innovative teams, contribute to meaningful projects, and grow as
+                        a
+                        developer while building products that make a real impact.
+
+                        **Let's build something exceptional together.**
+                    </p>
+                </div>
+
+                <!-- <div class="pic"><img src="image/PROFILE.JPG" alt=""> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <!-- resume content -->
+        </section>
+
+        <section id="portfolio">
+            <!-- portfolio content -->
+
+
+
+            <div class="outerbox">
+                <a class="box" href="practicework.html">
+                    <img src="image/p2.jpg" alt="" class="pic">
+                    Practice Work
+                </a>
+
+
+
+                <a class="box" href="projectwork.html">
+                    <img src="image/p1.jpg" alt="" class="pic">
+                    Project Work
+
+                </a>
+
+
+
+
+
+
+
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <!-- contact content -->
+             <div class="footer">
+
+               
+               
+                  <form class="form"  action=".php">
+                 <div  class="formbox">
+                    <input type="text" placeholder="Your Full Name" required></div>
+
+                 <div  class="formbox">
+                    <input type="email" placeholder="Email Address" required
+                    ></div>
+
+                 <div  class="formbox">
+                    <input type="tel" placeholder="Phone Numnber"  pattern="[6-9][0-9]{9}"
+                     maxlength="10" required></div>
+
+                 
+
+                 <div  class="formbox">
+                    <textarea name="message" id="message" placeholder=" Your message or Query "></textarea></div>
+
+                 <button  type="submit" class="formbutton">Send</button>   
+                 <button  type="reset" class="formbutton">Reset</button>  </form>
+
+
+               
+
+                  <div class="details">
+                    <div>
+                    <h4>What's app No</h4>
+                    <h6>+91 9958241872</h6>
+                    </div>
+                    <div>
+                        <h4>Email Id</h4>
+                        <h6>shubhamindia02@gmail.com</h6>
+                    </div>
+                    <div class="social">
+                   
+                    <h2><a href="">I</a></h2>
+                    <h2><a href="">in</a></h2>
+                    <h2><a href="">Bn</a></h2>
+
+                </div>
+                </div>
+                
+                </div>
+
+               
+            </section>
+           
+
+
+
+
+
+
+        
+
+    </main>
+
+
+
+
+    <script>
+        var toggleBtn = document.querySelector(".toggle_btn");
+        var dropdownMenu = document.querySelector(".dropdown_menu");
+
+        toggleBtn.addEventListener("click", function () {
+            dropdownMenu.classList.toggle("open");
+        });
+
+
+    </script>
+</body>
+
+</html>
