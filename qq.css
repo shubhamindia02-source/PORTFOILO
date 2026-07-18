@@ -3,9 +3,7 @@
 
 
 
-/* ========================= */
-/* Mobile Phones (0 - 767px) */
-/* ========================= */
+
 
 @media (max-width:767px){
 
@@ -14,7 +12,7 @@
     flex-direction:column;
     text-align:center;
     width:90%;
-    background: blue;
+   
 }
 
 .info h3,
@@ -140,9 +138,7 @@
 
 
 
-    .sec-box{
-        background: green;
-    }
+    
 .info h3,
 .info h2{
     font-size:45px;
