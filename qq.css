@@ -1,0 +1,225 @@
+
+
+
+
+
+/* ========================= */
+/* Mobile Phones (0 - 767px) */
+/* ========================= */
+
+@media (max-width:767px){
+
+/* Home */
+.sec-box{
+    flex-direction:column;
+    text-align:center;
+    width:90%;
+    background: blue;
+}
+
+.info h3,
+.info h2{
+    font-size:35px;
+      
+}
+
+.info h2{
+    margin-top: 1px;
+}
+
+.info h4{
+    font-size:22px;
+    margin-top: 1px;
+}
+
+.link-button{
+    align-items:center;
+}
+
+.link-button a{
+    width:180px;
+}
+
+/* About */
+
+.sec-two{
+    flex-direction:column;
+    align-items:center;
+}
+
+.aboutinfo{
+    width:100%;
+    margin:0;
+    text-align:center;
+}
+
+.aboutinfo h3{
+    margin-top:20px;
+    font-size:45px;
+    margin-left: -200px;
+}
+
+.aboutinfo p{
+    width:100%;
+     text-align: left;    
+}
+
+
+.pic img{
+    width:250px;
+    height:auto;
+    margin-top:20px;
+}
+
+/* Portfolio */
+
+.outerbox{
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+    
+}
+
+.box{
+    width:90%;
+    max-width:350px;
+    height: 420px;
+}
+
+.box img{
+    width:100%;
+    height:auto;
+}
+
+/* Contact */
+
+.footer{
+    flex-direction:column;
+    align-items:center;
+}
+
+.form{
+    width:100%;
+    margin:0;
+}
+
+.formbox input,
+#message{
+    width:100%;
+    margin:10px 0;
+}
+
+.formbutton{
+    width:100%;
+    margin:10px 0;
+}
+
+.details{
+    width:100%;
+    margin-top:30px;
+}
+
+.details div{
+    width:100%;
+    text-align:center;
+    margin-left:0;
+}
+
+.social{
+    justify-content:center;
+}
+
+}
+
+
+/* ========================= */
+/* Tablet (768px - 991px) */
+/* ========================= */
+
+@media (min-width:768px) and (max-width:991px){
+
+
+
+    .sec-box{
+        background: green;
+    }
+.info h3,
+.info h2{
+    font-size:45px;
+}
+
+.info h4{
+    font-size:28px;
+}
+
+.sec-two{
+    flex-direction:column;
+    align-items:center;
+    
+}
+
+.aboutinfo{
+    width:90%;
+    margin:0;
+}
+
+.aboutinfo h3{
+    margin-top:20px;
+}
+
+.aboutinfo p{
+    width:100%;
+}
+
+.pic img{
+    width:320px;
+    height:auto;
+}
+
+.outerbox{
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.box{
+    width:320px;
+}
+
+.footer{
+    flex-direction:column;
+    align-items:center;
+}
+
+.form{
+    width:90%;
+    margin:0;
+}
+
+.formbox input,
+#message{
+    width:100%;
+}
+
+.formbutton{
+    width:100%;
+    margin:10px 0;
+}
+
+.details div{
+    width:100%;
+    text-align:center;
+    margin-left:0;
+}
+
+.social{
+    justify-content:center;
+}
+
+}
+
+
+
+
+
+
+ 

@@ -37,6 +37,7 @@ main section {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 80%;
+    background: #000;
 
 }
 
@@ -211,17 +212,6 @@ main section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .pic {
     width: 400px;
     border-top-left-radius: 10px;
@@ -248,6 +238,7 @@ main section {
     
     display: flex;
     justify-content: space-between;
+    /* background: #000; */
   
    
 }
@@ -257,6 +248,7 @@ main section {
     
     margin-top: -100px;
     margin-left:30px ;
+    
 }
 
 .formbox input, #message{
@@ -295,7 +287,7 @@ main section {
 
 .formbutton:hover{
     transform: translateY(-10px);
-    box-shadow: px 5px 5px var(--sec-color);
+    box-shadow: 5px 5px 5px var(--sec-color);
 
 }
 
