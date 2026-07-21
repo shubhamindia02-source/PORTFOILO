@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+
+<style>
+
+
+
+
+
+ * {
+        margin: 0;
+        padding: 0;
+          cursor: pointer;
+        margin: 10px;
+
+    }
+
+    body {
+        background: #131313;
+        color: whitesmoke;
+        font-family: Helvetica, sans-serif;
+        align-items: center;
+    }
+
+    .navbar {
+        background: #292929;
+        width: 800px;
+        height: 80px;
+        margin: 30px auto;
+        box-shadow: 0px 3px 10px rgb(131, 129, 129);
+        text-align: center;
+        border-radius: 20px;
+
+    }
+
+    h2 {
+        padding-top: 15px;
+        font-size: 50px;
+    }
+    body {
+        background: #000;
+    }
+
+  
+
+    h1 {
+        color: aqua;
+    }
+
+    #my {
+        color: aliceblue;
+    }
+
+    header {
+        text-align: center;
+
+    }
+
+    .pic {
+        width: 500px;
+
+    }
+
+    .text {
+        color: gray;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+
+<body>
+
+      <header>
+        <nav class="navbar">
+            <h2>JQuery</h2>
+        </nav>
+    </header>
+  
+    <button id="b1"> show hide heading</button>
+    <h1 id="my">welcome to jquery</h1>
+    <h1> Jquery</h1>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minima sed voluptas eos iste,
+        accusamus dolorum facilis beatae ipsum non itaque illum sint fuga suscipit dignissimos pariatur amet, fugit
+        expedita?
+        Nesciunt aspernatur, quis suscipit, autem corrupti cumque sapiente esse obcaecati, doloribus facilis vero! Ab ut
+        consectetur alias cupiditate sapiente nam, quod officiis autem iusto soluta, nesciunt officia molestiae esse
+        aliquam?</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id consequuntur quisquam eaque quia quos.
+        Repudiandae nesciunt beatae quos eaque exercitationem optio in, itaque commodi distinctio? Consectetur illum ea
+        dolorem molestiae.
+        Incidunt, sequi vel dicta, ipsum impedit quaerat alias quasi adipisci consectetur soluta deleniti sed est
+        molestias aliquam culpa! Culpa dolor impedit corporis! Quae, voluptatibus quibusdam? Unde veniam perferendis hic
+        at?
+    </p>
+  <img src="../image/n1.jpg" class="pic">
+
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#my").toggle("fast")
+            })
+           
+            $(".text").mouseover(function()
+        {
+            $(this).css({"transition":"2s","color":"red"})
+        })
+
+
+        $(".text").mouseleave(function()
+        {
+            $(this).css({"transition":"4s","color":"green"})
+        })
+
+      $(".pic").click(function(){
+          $(this).css({"transform":"translateX(1000px)","transition":"0.7s ease-in", "border-radius":"100%"})
+
+         
+      })
+
+      $(".pic").mouseover(function(){
+        $(this).css({"transform":"translateX(00px)","transition":"0.7s ease-in","border-radius":"0%" })
+
+
+        
+      })
+
+
+
+
+        }
+        )
+
+    </script>
+
+
+
+
+</body>
+
+</html>
