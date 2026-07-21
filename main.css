@@ -1,0 +1,275 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins, sans-serif;
+    }
+
+    body {
+        
+        background-color: var(--first-color);
+
+    }
+
+    :root {
+        --first-color: #000e25;
+        --sec-color: rgb(7, 156, 255);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .link li {
+        list-style: none;
+    }
+
+    .menu-list {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 18px;
+    }
+
+    .menu-list:hover {
+        color: var(--sec-color);
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .navbar {
+
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--sec-color);
+
+    }
+
+    .navbar-menu .link {
+        display: flex;
+        gap: 40px;
+    }
+
+    .menu-list {
+        font-size: 18px;
+        font-weight: 300;
+        padding: 4px 10px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        width: 200px;
+        border: 2px solid transparent;
+
+        transition: all 0.4s ease;
+    }
+
+    .menu-list:hover {
+        color: var(--sec-color);
+        background: rgba(170, 208, 233, 0.748);
+        border: 0px solid rgba(188, 212, 228, 0.4);
+
+    }
+
+    .navbar .toggle_btn img {
+        cursor: pointer;
+        width: 1.5rem;
+        display: none;
+    }
+
+    .dropdown_menu {
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+
+        height: 210px;
+        width: 120px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+   
+
+    .dropdown_menu {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .dropdown_menu .link a {
+        display: block;
+
+        width: 100px;
+    }
+
+    @media (max-width: 992px) {
+        .navbar .toggle_btn img {
+            display: block !important;
+        }
+
+        .navbar-menu .link {
+            display: none;
+        }
+
+        .dropdown_menu {
+            display: block;
+
+        }
+       
+
+    }
+
+    @media (min-width:992px) {
+
+
+        .dropdown_menu {
+            display: none;
+        }
+         #bar-div {
+            display: none;
+         }
+    }
+
+
+
+    .fa-solid {
+        font-size: 30px;
+        width: 300px;
+    }
+
+
+
+
+
+    /* Contact */
+#contact {
+    background: #001636;
+}
+.footer{
+    width: 90%;
+    
+    display: flex;
+    justify-content: space-between;
+    /* background: #000; */
+  
+   
+}
+.form{
+    width: 40%;
+     /* background: red; */ 
+    
+    margin-top: -100px;
+    margin-left:30px ;
+    
+}
+
+.formbox input, #message{
+    width: 90%;
+    height: 70px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background:rgb(194, 194, 194);
+  
+    
+    border-width: 0px;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: var(--sec-color);
+    resize: none;
+
+}
+
+.formbutton{
+    width: 43%;
+    margin-left: 18px;
+
+
+    
+    color:whitesmoke;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: var(--first-color);
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1.2rem;
+   
+    transition: all 0.4s ease;
+}
+
+.formbutton:hover{
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 5px var(--sec-color);
+
+}
+
+.details div{
+    text-align: right;
+    box-sizing: border-box;
+    width: 400px;
+    
+    margin-top: 20px;
+
+}
+.details div h4{
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 400;
+    
+}
+
+.details div h6{
+    font-size: 1.3rem;
+    color: var(--sec-color);
+
+}
+.social{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    color: whitesmoke;
+   
+}
+.social h2{
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 4px 1px;
+    
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+h2 a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.social h2:hover{
+    box-shadow: 0px 3px 5px var(--sec-color);
+    transform: translateY(-5px);
+
+    
+}

@@ -1,224 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Bree+Serif&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fontawesome.com/icons/classic/solid/angles-up?pc=rgba%28255%2C%20255%2C%20255%2C%201.00%29&sc=rgba%28255%2C%20255%2C%20255%2C%200.4%29">
+
+
+
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="qq.css">
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 </head>
 <style>
-* {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        background: #131313;
-        color: whitesmoke;
-        font-family: Helvetica, sans-serif;
-    }
-
-    header {
-        position: sticky;
-        top: 0px;
-    }
-
-    nav {
-        height: 7vh;
-        background: #131313;
-
-
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-
-    }
-
-    .leftnav {
-
-        width: 40%;
-        text-align: center;
-        font-size: 25px;
-    }
-
-    .rightnav {
-
-        width: 40%;
-    }
-
-    .rightnav ul {
-
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul li {
-        list-style: none;
-        margin-right: 30px;
-        font-weight: bolder;
-        font-size: 20px;
-    }
-
-    .rightnav ul li a {
-        text-decoration: none;
-        color: whitesmoke;
-    }
-
-    .rightnav ul li a:hover {
-
-        color: #e64500;
-    }
-
-
-
-
-
-    .navfooter {
-          
-        background: #252525;
-        padding: 20px;
-        text-align: center;
-        margin-top: 300px;
-
-
-    }
-
-    .mywork {
-        font-size: 23px;
-        margin-bottom: 30px;
-        opacity: 0.6;
-    }
-
-    .socialmedialink {
-        margin: 20px;
-    }
-
-    .socialmedialink a {
-        color: whitesmoke;
-        margin: 15px;
-
-        text-decoration: none;
-        font-size: 23px;
-        opacity: 0.6;
-
-
-    }
-
-    .socialmedialink a:hover {
-        color: #e64500;
-        opacity: 1;
-    }
-
-    .copyright {
-        font-size: 23px;
-        opacity: 0.5;
-
+     :root {
+        --first-color: #000e25;
+        --sec-color: rgb(7, 156, 255);
     }
 
 
     .mainsection {
-       
+
         display: flex;
         justify-content: space-around;
-        margin: 110px;
+        margin-top: 200px;
         flex-wrap: wrap;
-        
-         
+
+
+
 
     }
-    .tab{
+
+    .tab {
         width: 400px;
         height: 140px;
         border-radius: 10px;
-        background-color:rgba(245, 245, 245, 0.862);
-        box-shadow: 0px 5px 10px  #91868245;
+        background-color: var(--sec-color);
+        box-shadow: 0px 5px 10px #91868245;
         text-align: center;
+        padding-top: 40px;
         font-size: 40px;
-        padding-top :100px;
-cursor: pointer;
-      transition: 0.4s ease-in-out;
-        
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+
     }
-.tab a{
-    text-decoration: none;
-    color: black;
-    transition: 0.4s ease;
-    
-}
 
-.tab a:hover{
-    
-    color: whitesmoke;
-    font-weight: 700;
-    
-}
+    .tab a {
+        text-decoration: none;
+        color:var(--first-color);
+        transition: 0.4s ease;
+
+    }
 
 
-.tab:hover {
+
+    .tab:hover {
         transform: scale(1.2);
-        background-color: #e64500;
-        font-weight: 800;
-        
-       }
-
+        color: white;
     
+    }
+     .tab:hover a{
+         color: white;
+     }
 
 
+
+    /* media query */
+
+    @media (min-width:768px) and (max-width:991px) {
+
+
+        .tab {
+            margin-top: 30px;
+            padding-top: -200px;
+
+        }
+
+    }
+
+
+    @media (max-width:767px){
+        .tab{
+            width: 300px;
+            height: 100px;
+            margin-top: 30px;
+            padding-top: 30px;
+            font-size: 30px;
+        }
+    }
 </style>
-<body>
 
-      <header>
-        <nav class="nav">
-            <div class="leftnav">Shubham Portfolio</div>
-            <div class="rightnav">
-                <ul>
-                    <li> <a href="index.html">Home</a></li>
-                    <li> <a href="about.html">About</a></li>
-                    <li> <a href="work.html">Work</a></li>
-                    <li> <a href="contactme.html">Contact Me</a></li>
+<body>
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">Shubham Arya</div>
+            <div class="navbar-menu">
+                <ul class="link">
+                    <li><a href="#home" class="menu-list">Home</a></li>
+                    <li><a href="#about" class="menu-list">About</a></li>
+                    <li><a href="#resume" class="menu-list">Resume</a></li>
+                    <li><a href="#portfolio" class="menu-list">Work</a></li>
+                    <li><a href="#contact" class="menu-list">Contact</a></li>
                 </ul>
             </div>
-        </nav>
-        <hr>
-
+            <div class="toggle_btn">
+                <img src="image/hamburger.png" alt="" class="ham-icon" id="bar">
+            </div>
+            <div class="dropdown_menu open" id="bar-div">
+                <ul class="link" id="link-bar">
+                    <li><a href="#home" class="menu-list">Home</a></li>
+                    <li><a href="#about" class="menu-list">About</a></li>
+                    <li><a href="#resume" class="menu-list">Resume</a></li>
+                    <li><a href="#portfolio" class="menu-list">Work</a></li>
+                    <li><a href="#contact" class="menu-list">Contact</a></li>
+                </ul>
+            </div>
     </header>
-<main>
+    <main>
 
-     <section class="mainsection">
+        <section class="mainsection">
             <div class="tab">
-                
-                    <a href="html.html">Html Work</a>
-                
+
+                <a href="html.html">Html Work</a>
             </div>
             <div class="tab">
                 <a href="javascript/javascriptwork.html">Javascript Work</a>
+            </div>
 
-            
-        </div>
+            <div class="tab">
+                <a href="jquery/jqwork.html">JQuery</a>
+            </div>
 
 
         </section>
 
-</main>
-   
-   
-    
+
+        
+
+    </main>
 
 
 
-      <footer>
-        <div class="navfooter">
-            <div class="mywork">UI/UX Designer | Web Designer | Graphic Designer | Video Editor</div>
-            <div class="socialmedialink">
-                <a href="https://www.linkedin.com/in/shubham-arya-3a2b3a266?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a>
-                <a href="https://www.behance.net/shubhamarya24">Behance</a>
-                <a href="https://www.instagram.com/shubham_arya98?igsh=Nm92cGw2eHJvcm4z">Instagram</a>
-            </div>
-            <div class="copyright"> © 2026 Shubham Arya. All rights reserved.</div>
-        </div>
 
 
-    </footer>
-    
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#bar").click(function () {
+                $("#bar-div").toggle("fast")
+
+            })
+
+
+        })
+
+
+    </script>
+
+
 </body>
+
 </html>
