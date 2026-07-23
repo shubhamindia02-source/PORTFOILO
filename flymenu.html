@@ -9,77 +9,164 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
 
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    ></script>
+
 <style>
-    *{
-       padding: 0;
+     * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins, sans-serif;
     }
-    body{
-        min-height: 100vh;
-        background: #210303;
+
+    body {
+       background: var(--first-color);
 
     }
-    nav{
-        background: white;
-        box-shadow: 3px 3px 5px rgba(227, 13, 13, 0.592);
+
+    :root {
+        --first-color: #000e25;
+        --sec-color: rgb(7, 156, 255);
     }
-    nav ul{
-        width: 100%;
+
+    
+
+    .link li {
         list-style: none;
-        display: flex;
-         justify-content: flex-end;    
-         align-items: center;
     }
-    nav li{
-        height: 50px;
 
-
-    }
-    a{
-        height: 100%;
-        padding: 0 30px;
+    .menu-list {
         text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: black;
+        color: whitesmoke;
+        font-size: 18px;
+    }
 
+    .menu-list:hover {
+        color: var(--sec-color);
     }
-    nav a:hover{
-        background: rgba(82, 82, 82, 0.539);
-    }
-    .sidebar{
+
+    header {
         position: fixed;
         top: 0;
-        right: 0;
-        height: 100vh;
-        width: 250px;
-        background: white;
-        box-shadow: -10px 0 10px rgba(255, 255, 255, 0.151);
-        display: none;
-        flex-direction:column ;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-    }
-    .sidebar li{
         width: 100%;
-    }
-    .sidebar a{
-        width:100% ;
-         
+        z-index: 999;
     }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
-  margin: 14px;
-  
-  
-}
+    .navbar {
 
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+        background: var(--first-color);
+        z-index: 999;
+    }
+
+    .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--sec-color);
+
+    }
+
+    .navbar-menu .link {
+        display: flex;
+        gap: 40px;
+    }
+
+    .menu-list {
+        font-size: 18px;
+        font-weight: 300;
+        padding: 4px 10px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        width: 200px;
+        border: 2px solid transparent;
+
+        transition: all 0.4s ease;
+    }
+
+    .menu-list:hover {
+        color: var(--sec-color);
+        background: rgba(170, 208, 233, 0.748);
+        border: 0px solid rgba(188, 212, 228, 0.4);
+
+    }
+
+    .navbar .toggle_btn img {
+        cursor: pointer;
+        width: 1.5rem;
+        display: none;
+    }
+
+    .dropdown_menu {
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+
+        height: 210px;
+        width: 120px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+   
+
+    .dropdown_menu {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .dropdown_menu .link a {
+        display: block;
+
+        width: 100px;
+    }
+
+
+    
+    @media (max-width: 992px) {
+        .navbar .toggle_btn img {
+            display: block !important;
+        }
+
+        .navbar-menu .link {
+            display: none;
+        }
+
+        .dropdown_menu {
+            display: block;
+
+        }
+       
+
+    }
+
+    @media (min-width:992px) {
+
+
+        .dropdown_menu {
+            display: none;
+        }
+         #bar-div {
+            display: none;
+         }
+    }
+
+
+    
 
 
 </style>
@@ -87,24 +174,57 @@
 
 
 
-</style>
 <body>
-    <nav>
-        <ul class="sidebar">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">contact</a></li>
 
-        </ul><ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">contact</a></li>
-        <li>menu</li>
+     <header>
+        <nav class="navbar">
 
-        </ul>
-    </nav>
+            <div class="logo">Shubham Arya</div>
+            <div class="navbar-menu">
+                <ul class="link">
+                    <li><a href="#home" class="menu-list">Home</a></li>
+                    <li><a href="#about" class="menu-list">About</a></li>
+                    <li><a href="#resume" class="menu-list">Resume</a></li>
+                    <li><a href="#portfolio" class="menu-list">Work</a></li>
+                    <li><a href="#contact" class="menu-list">Contact</a></li>
+                </ul>
+            </div>
+            <div class="toggle_btn">
+                <img src="image/hamburger.png" alt="" class="ham-icon" id="bar">
+            </div>
+            <div class="dropdown_menu open" id="bar-div">
+                <ul class="link" id="link-bar">
+                    <li><a href="#home" class="menu-list">Home</a></li>
+                    <li><a href="#about" class="menu-list">About</a></li>
+                    <li><a href="#resume" class="menu-list">Resume</a></li>
+                    <li><a href="#portfolio" class="menu-list">Work</a></li>
+                    <li><a href="#contact" class="menu-list">Contact</a></li>
+                </ul>
+            </div>
+    </header>
+
+
+
+
+
+
+
+
+        
+<script>
+
+     $(document).ready(function (){
+        $("#bar").click(function(){
+            $("#bar-div").toggle("fast")
+
+        })
+
+
+     })
+
+
+</script>
+   
     
 </body>
 </html>

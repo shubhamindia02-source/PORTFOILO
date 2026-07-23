@@ -7,15 +7,22 @@
     <title> JQuery work</title>
 </head>
 <style>
-    * {
+   * {
         margin: 0;
         padding: 0;
+         box-sizing: border-box;
+        font-family: poppins, sans-serif;
     }
 
+    :root {
+        --first-color: #000e25;
+        --sec-color: rgb(7, 156, 255);
+    }
+
+
     body {
-        background: #131313;
-        color: whitesmoke;
-        font-family: Helvetica, sans-serif;
+        background: var(--first-color);
+       
     }
 
    
@@ -24,6 +31,7 @@
         margin-top: 100px;
         margin-bottom: 40px;
         font-size: 50px;
+        color: var(--sec-color);
     }
 
 
@@ -39,38 +47,51 @@
     } 
     a{
         text-decoration: none;
-        color: #131313;
+      
         
     }
 
     .tab {
-        padding-top: 20px;
+        padding-top: 15px;
         font-size: 25px;
         font-weight: 500;
         text-align: center;
         border-radius: 10px;
-        background-color:rgba(245, 245, 245, 0.742);
-        box-shadow: 0px 5px 10px  #91868245;
+        background-color:var(--sec-color);
+       
         width: 20%;
-        height: 40px;
+        height: 60px;
         cursor: pointer;
         transition: 0.4s ease-in-out;
         margin-left: 5%;
         margin-right: 5%;
 
         margin-top: 40px;
+          font-weight: 800;
+        
         
        
         
 
     }
+           .tab a {
+    color: var(--first-color);
+    transition: 0.4s ease;
+}
+
 
     .tab:hover {
         transform: scale(1.2);
-        background-color: #e64500;
-        font-weight: 800;
+         box-shadow: 0px 5px 15px  var(--sec-color);
         
        }
+
+       .tab:hover a{
+        color: white;
+       }
+
+
+
 
 
 
@@ -83,7 +104,42 @@
 
     }
 
-       .navfooter {
+
+
+
+    /* media query */
+
+
+
+     @media (min-width:768px) and (max-width:991px){
+
+        .tab{
+            width: 220px;
+            
+        }
+        .tab a{
+            font-size:22px;
+        }    
+        .break{
+            margin-bottom: 10px;
+        }
+
+     }
+
+
+      @media (max-width:767px){
+         .tab{
+            width: 300px;
+         }
+         
+          .break{
+            margin-top: -60px;
+        }
+
+      }
+
+
+       /* .navfooter {
 
         background: #252525;
         padding: 20px;
@@ -123,15 +179,8 @@
         font-size: 23px;
         opacity: 0.5;
 
-    }
-.tab a {
-    color: black;
-    transition: 0.4s ease;
-}
-.tab a:hover{
-    color: whitesmoke;
-}
-   
+    } */
+
    
    
 
@@ -161,7 +210,7 @@
         </section>
     </main>
     <hr class="break">
-     <footer>
+     <!-- <footer>
         <div class="navfooter">
             <div class="mywork">UI/UX Designer | Web Designer | Graphic Designer | Video Editor</div>
             <div class="socialmedialink">
@@ -173,7 +222,7 @@
         </div>
 
 
-    </footer>
+    </footer> -->
 
 </body>
 

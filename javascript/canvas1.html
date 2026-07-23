@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-
     * {
         margin: 0;
         padding: 0;
@@ -40,45 +40,61 @@
         margin-left: 10%;
     }
 </style>
+
 <body>
 
-       <header>
+    <header>
         <nav class="navbar">
             <h2>Canvas </h2>
         </nav>
     </header>
-   
-    <canvas id="mycan" style="background:rgb(114, 111, 111); width: 80%; height: 600;"></canvas>
+    <input type="color" id="mycolor" style="position: absolute;">
+    <canvas id="mycan" style="background:rgb(0, 0, 0); width: 80%; height: 600;"></canvas>
 
-     <script>
+
+
+    <script>
         var c = document.getElementById("mycan");
+        var mycolor = document.getElementById("mycolor");
+
+
         var k;
-        var r =10
+        var r = 10
         var d = c.getContext("2d");
-          c.height = window.innerHeight;
+        c.height = window.innerHeight;
         c.width = window.innerWidth;
         var red, green, blue, drawmode
         var drawmode = false
+        drawmode = "red"
 
-        function f1(event)
 
-        {
 
+        //document.title= "working"
+
+        mycolor.onchange = function () {
+            //alert(this.value)
+            drawcolor = this.value
+        }
+
+        function f1(event) {
+
+            // alert(event.keycode)
             k = event.key
-              switch (k) {
 
-                case "r":
-                    if (r < 400) {
+            switch (k) {
+
+                case "+":
+                    if (r < 100) {
                         r = r + 1
                         document.title = "r"
                     }
 
                     break;
 
-                case "t":
+                case "-":
                     if (r > 10) {
                         r = r - 1
-                        document.tittle = "r"
+                        document.tittle = r
                     }
                     break;
 
@@ -86,12 +102,12 @@
                     d.clearRect(0, 0, window.innerHeight, window.innerWidth)
                     break;
             }
+
+
         }
 
 
 
-
-        
         function draw(event) {
             if (drawmode) {
                 var x = event.pageX
@@ -101,13 +117,11 @@
                 green = Math.round(Math.random() * 255)
                 blue = Math.round(Math.random() * 255)
                 drawcolor = "rgb(" + red + ", " + green + ", " + blue + ")"
-                
                 //drawcolor="RED"
 
                 d.beginPath();
-
-               d.arc(x,y,r,0,2*Math.PI);
-
+                d.moveTo(x, y)
+                d.lineTo(Math.random() * 1200, Math.random() * 1200);
 
                 d.fillStyle =drawcolor
                 d.fill()
@@ -118,14 +132,13 @@
         }
 
 
-         function f2()
+        function f2()
         {
             drawmode = (!drawmode)?true:false
             document.tittle = drawmode
         }
 
-
-           document.addEventListener("keydown",f1)
+        document.addEventListener("keydown",f1)
          document.addEventListener("click",f2)
            document.addEventListener("mousemove",draw)
 
@@ -135,13 +148,10 @@
 
 
 
-    </script> 
+
+    </script>
 
 
-
-
-  
-
-    
 </body>
+
 </html>
