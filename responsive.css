@@ -54,7 +54,7 @@
 .aboutinfo h3{
     margin-top:20px;
     font-size:45px;
-    margin-left: -200px;
+    margin-left: -160px;
 }
 
 .aboutinfo p{
@@ -81,7 +81,7 @@
 .box{
     width:90%;
     max-width:350px;
-    height: 420px;
+    height: 350px;
 }
 
 .box img{

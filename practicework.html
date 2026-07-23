@@ -155,19 +155,34 @@
 
 
 
-    <script>
+        
+<script>
 
-        $(document).ready(function () {
-            $("#bar").click(function () {
-                $("#bar-div").toggle("fast")
+     $(document).ready(function (){
 
-            })
+
+       
+  $("#bar-div").hide("fast")
+
+         
+        $("#bar").click(function(){
+            $("#bar-div").fadeToggle("fast")
 
 
         })
 
+          $("#bar-div a").click(function(){
 
-    </script>
+        $("#bar-div").slideUp(300);
+
+    });
+
+
+
+     })
+
+
+</script>
 
 
 </body>

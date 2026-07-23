@@ -2,18 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>nav bar
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    </title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-</head>
 
-<script src="https://code.jquery.com/jquery-4.0.0.min.js"
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
     ></script>
-
-<style>
-     * {
+</head>
+<style> * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -21,7 +17,7 @@
     }
 
     body {
-       background: var(--first-color);
+        background: var(--first-color);
 
     }
 
@@ -30,30 +26,19 @@
         --sec-color: rgb(7, 156, 255);
     }
 
-    
-
-    .link li {
-        list-style: none;
+    html {
+        scroll-behavior: smooth;
     }
 
-    .menu-list {
-        text-decoration: none;
-        color: whitesmoke;
-        font-size: 18px;
-    }
 
-    .menu-list:hover {
-        color: var(--sec-color);
-    }
-
-    header {
+      header {
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 999;
     }
 
-    .navbar {
+     .navbar {
 
         width: 100%;
         height: 70px;
@@ -63,24 +48,31 @@
         justify-content: space-around;
         backdrop-filter: blur(10px);
         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-        background: var(--first-color);
         z-index: 999;
     }
 
+    
     .navbar .logo {
         font-size: 1.5rem;
         font-weight: bold;
         color: var(--sec-color);
 
     }
-
-    .navbar-menu .link {
+     .navbar-menu .link {
         display: flex;
         gap: 40px;
     }
 
+    .link li {
+        list-style: none;
+    }
+
     .menu-list {
+        text-decoration: none;
+        color: whitesmoke;
         font-size: 18px;
+
+     
         font-weight: 300;
         padding: 4px 10px;
         border-radius: 20px;
@@ -91,12 +83,14 @@
         transition: all 0.4s ease;
     }
 
+
     .menu-list:hover {
         color: var(--sec-color);
-        background: rgba(170, 208, 233, 0.748);
+         background: rgba(170, 208, 233, 0.748);
         border: 0px solid rgba(188, 212, 228, 0.4);
 
     }
+
 
     .navbar .toggle_btn img {
         cursor: pointer;
@@ -114,7 +108,7 @@
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(15px);
         border-radius: 10px;
-        overflow: hidden;
+        
 
     }
 
@@ -135,8 +129,8 @@
         width: 100px;
     }
 
-
     
+
     @media (max-width: 992px) {
         .navbar .toggle_btn img {
             display: block !important;
@@ -163,20 +157,16 @@
          #bar-div {
             display: none;
          }
+         
     }
 
 
-    
 
-
+  
 </style>
-    
-
-
 
 <body>
-
-     <header>
+    <header>
         <nav class="navbar">
 
             <div class="logo">Shubham Arya</div>
@@ -205,26 +195,33 @@
 
 
 
-
-
-
-
-
-        
-<script>
+    <script>
 
      $(document).ready(function (){
+
+
+       
+  $("#bar-div").hide("fast")
+
+         
         $("#bar").click(function(){
-            $("#bar-div").toggle("fast")
+            $("#bar-div").fadeToggle("fast")
+
 
         })
+
+          $("#bar-div a").click(function(){
+
+        $("#bar-div").slideUp(300);
+
+    });
+
 
 
      })
 
 
 </script>
-   
-    
-</body>
+
+
 </html>
