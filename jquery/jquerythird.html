@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajas/libs/animate.css/4.1.1/animate.min.css">
+
+    
+</head>
+
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+   #header{
+    width: 80%;
+    background: black;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom:20px;
+
+
+   }
+
+   img{
+    margin: 70px;
+
+   }
+   p{
+    text-align: justify;
+    width: 80%;
+    margin: 5%;
+    padding: 10px;
+
+   }
+   table{
+    width: 100%;
+
+   }
+   .text{
+    color: gray;
+    box-shadow: 10px 10px 10px gray;
+   }
+
+   .pic{
+    transition: 0.2s;
+    border-radius: 100px;
+
+   }
+
+</style>
+<body> 
+
+
+    
+    <script>
+
+        $(document).ready(function(){
+
+    $("p").mouseover(function(){
+        $("this").addclass("sel animate_animate animate_bounce")
+    })
+
+
+     $("p").mouseout(function(){
+        $(this).css({"transition":"2s"})
+        $(this).removeClass("sel animate_bounces")
+
+
+     })
+
+     $(h1).mouseover(function(){
+        $(this).addClass("animate_animated  animate_headShake")
+     })
+
+
+     
+     $(h1).mouseout(function(){
+        $(this).removeClass("animate_headShake")
+     })
+
+
+
+     $("img").mouseover(function(){
+        $(this).css("width":"30%")
+        $(this).toggleClass("pic animate_animated  animate_flip")
+     })
+
+
+
+
+
+
+        })
+
+
+    </script>
+    
+        <div id="header"> Jquery Classes :----addclass removeClass toggleClass
+            
+             </div><img src="../image/n1.jpg" alt="" width="20%">
+             <br>
+             <img src="../image/n2.jpg" alt="">
+
+             <h1>About</h1>
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A placeat id pariatur voluptate, veniam quae porro quis soluta animi ipsam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reprehenderit quasi natus exercitationem dicta, distinctio numquam magnam. Rem, voluptas modi.</p>
+
+             <h1>policy</h1>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, tempora! Voluptatum sint aperiam tempora accusantium cum tenetur odit quibusdam quisquam natus molestiae doloremque dignissimos, maxime eius ducimus neque quae repudiandae corporis error quis maiores ad et voluptatem! Beatae, molestiae asperiores.</p>
+
+             <h1>Report</h1>
+             <table border="1">
+                <caption>Reports</caption>
+                <tr>
+                    <th>January</th>
+                    <th>Sale</th>
+                </tr>
+
+                <tr>
+                    <th>Product 103942</th>
+                    <th> 348</th>
+                </tr>
+
+                <tr>
+                    <th>Product 10092</th>
+                    <th> 008</th>
+                </tr>
+
+
+             </table>
+
+             <footer>
+
+                <h2> ALL Right Reserved &copy; </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus iure corrupti assumenda quia non ipsam, repudiandae, sequi, quo ea amet expedita ex sapiente vel! Ut, accusamus eos qui atque maxime labore, dolorum dolores eum vitae assumenda similique hic minus! Mollitia.</p>
+             </footer>
+
+
+
+
+
+    
+</body>
+</html>
